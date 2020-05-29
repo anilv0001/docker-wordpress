@@ -20,6 +20,8 @@ services:
       - db
     image: phpmyadmin/phpmyadmin
     restart: always
+    volumes: 
+      - ./custom.ini:/usr/local/etc/php/conf.d/uploads.ini
     ports:
       - '8080:80'
     environment:
